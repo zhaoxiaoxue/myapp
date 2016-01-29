@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <script src="js/zepto.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+      	document.addEventListener("plusready",function(){
+      		var curr = plus.webview.currentWebview();
+      	
+      		var body = plus.webview.create("_www/local/body.html","",{top:"44px",bounce:"vertical"});
+      		curr.append(body);
+			body.onloaded=function(){
+				plus.nativeUI.closeWaiting("Loading...",{})
+			}
+			body.onloading=function(){
+				plus.nativeUI.showWaiting("Loading...",{})
+			}
+			$("header").on("tap",".setting",function(){
+      			var setting = plus.webview.create("_www/local/_setting.html","",{width:"80%"});
+      			setting.show("slide-in-left");
+      			var win = plus.webview.getLaunchWebview()
+      			win.setStyle({mask:"rgba(0,0,0,0.6)"});
+      			win.addEventListener("maskClick",function(){
+      				win.setStyle({mask:"none"});
+      				setting.close("slide-out-left");
+      			})
+      		});
+      		$("header").on("tap",".xiala",function(){
+      			var setting = plus.webview.create("_www/local/_xiala.html","",{height:"80%"});
+      			setting.show("slide-in-top");
+      			var win = plus.webview.getLaunchWebview()
+      			win.setStyle({mask:"rgba(0,0,0,0.6)"});
+      			win.addEventListener("maskClick",function(){
+      				win.setStyle({mask:"none"});
+      				setting.close("slide-out-top");
+      			})
+      		});
+      	})
+     
+    </script>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+	    <a class="setting mui-icon mui-icon-plus mui-pull-left"></a>
+	    <h1 class="mui-title">澎湃</h1>
+	    <a class="xiala mui-icon mui-icon-bars mui-pull-right"></a>
+	</header>
+</body>
+</html>
+
+    	

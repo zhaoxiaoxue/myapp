@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+			<script src="../js/zepto.js"></script>
+			<script src="../js/mui.min.js"></script>
+    	<link href="../css/mui.min.css" rel="stylesheet"/>
+    	<script type="text/javascript" charset="utf-8">
+      	mui.init();
+      	$(function(){
+      		$("header").on("tap",".back",function(){
+      			var con=plus.webview.getWebviewById("con_con");
+      			con.canBack(function(e){
+      				if(e.canBack==true){
+//    					alert(e.canBack)
+      					con.back()
+      				}else{
+      					con.parent().close("slide-out-left");
+      				}
+      			})
+      		})
+      	})
+      	</script>
+	</head>
+	<body>
+	<header class="mui-bar mui-bar-nav">
+	    <a class="back mui-icon  mui-pull-left"><</a>
+	    <h1 class="mui-title">内容详情</h1>
+	</header>
+	</body>
+<ml>

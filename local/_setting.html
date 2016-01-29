@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css" />
+		<style>
+			.mui-row.mui-fullscreen>[class*="mui-col-"] {
+				height: 100%;
+			}
+			.mui-col-xs-3,
+			.mui-control-content {
+				overflow-y: auto;
+				height: 100%;
+			}
+			.mui-segmented-control .mui-control-item {
+				line-height: 50px;
+				width: 100%;
+			}
+			.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+				background-color: #fff;
+			}
+			header h4{
+    			width: 50%;
+    			float: left;
+    			text-align: center;
+    			line-height: 40px;
+    			font-weight:normal ;
+    			font-size: 16px;
+    		}
+    		.mui-icon{
+    			font-size: 14px;
+    			color:cornflowerblue;
+    		}
+    		
+    		.haha{
+    			height:60px;
+    			font-size: 14px;
+    			text-align: center;
+    			line-height: 30px;
+    			border-bottom: 1px solid #aaa;
+    		}
+    		.menu{
+    			width: 49%;
+    			height:120px;
+    			text-align: center;
+    			line-height: 120px;
+    			border:1px solid #aaa;
+    			float:left;
+    		}
+		</style>
+	</head>
+
+	<body style="top:44px">
+	<header class="mui-bar mui-bar-nav">
+      <h4><span class="mui-icon mui-icon-search"></span>搜索</h4>
+      <h4><span class="mui-icon mui-icon-email"></span>报料</h4>
+    </header>
+		<div class="mui-content mui-row mui-fullscreen" style="background:#fff">
+			<div class="mui-col-xs-3">
+				<div id="segmentedControls" class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-vertical">
+				</div>
+				<div class="haha" style="color:seagreen">时<br>事</div>
+				<div class="haha">财<br>经</div>
+				<div class="haha">思<br>想</div>
+				<div class="haha">生<br>活</div>
+				<div class="haha">问<br>吧</div>
+				<div class="haha">订<br>阅</div>
+			</div>
+			<div id="segmentedControlContents" class="mui-col-xs-9" style="border-left: 1px solid #c8c7cc;">
+			
+				<div id="item1">
+					<div class="menu">财经上下游</div>
+					<div class="menu">自贸区连线</div>
+					<div class="menu">地产界</div>
+					<div class="menu">10%公司</div>
+					<div class="menu">金改实验室</div>
+					<div class="menu">能见度</div>
+					<div class="menu">牛市点线面</div>
+					<div class="menu">澎湃商学院</div>
+				</div>
+			</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script>
+			
+		</script>
+
+	</body>
+
+</html>
